@@ -1,6 +1,9 @@
 import requests
 print(requests.__version__)
 
-r = requests.get('http://google.com')
+r = requests.get('https://raw.githubusercontent.com/Ayabdall/Lab1/master/lab1.py')
 
-print(r) #r.content could've also been used but since the exact format of what should've been printed was not specified I just defaulted to this
+open('code.txt', 'wb').write(r.content)
+
+x = open("code.txt", 'r').read()
+print(x)
